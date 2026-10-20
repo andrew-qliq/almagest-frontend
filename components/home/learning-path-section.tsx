@@ -54,7 +54,7 @@ export function LearningPathSection() {
           <Subtitle size="md" tone="white-muted" tracking="wider" weight="bold">
             Your Learning Path
           </Subtitle>
-          <h2 className="mt-6 font-heading text-[34px] font-medium leading-[1.08] tracking-[-0.045em] text-white sm:text-[44px] lg:text-[40px]">
+          <h2 className="mt-5 font-heading text-[34px] font-medium leading-[1.08] tracking-[-0.045em] text-white sm:text-[44px] lg:text-[40px]">
             Begin with fundamentals. Then specialise.
           </h2>
           <p className="mt-5 max-w-2xl text-[15px] leading-7 text-white/55 sm:text-base">

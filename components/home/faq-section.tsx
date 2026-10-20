@@ -19,7 +19,7 @@ export function FaqSection() {
             <Subtitle size="md" tone="gold" tracking="wider" weight="bold">
               Frequently Asked
             </Subtitle>
-            <h2 className="mt-7 font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-navy sm:text-[46px] lg:text-[40px]">
+            <h2 className="mt-5 font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-navy sm:text-[46px] lg:text-[40px]">
               Start with clarity.
             </h2>
           </div>

@@ -30,7 +30,7 @@ export function CommunitySection() {
             <Subtitle size="md" tone="gold" tracking="wider" weight="bold">
               Beyond the Lessons
             </Subtitle>
-            <h2 className="mt-7 font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-navy sm:text-[46px] lg:text-[40px]">
+            <h2 className="mt-5 font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-navy sm:text-[46px] lg:text-[40px]">
               Learning becomes more valuable in conversation.
             </h2>
             <p className="mt-5 text-[15px] leading-7 text-slate-500 sm:text-base">

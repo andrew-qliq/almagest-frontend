@@ -47,7 +47,7 @@ export function PremiseSection() {
                 size="md"
                 tone="gold"
                 tracking="wider"
-                className="mb-6"
+                className="mb-5"
                 weight="bold"
               >
                 The Premise

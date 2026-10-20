@@ -14,7 +14,7 @@ export function LatestInsightsSection() {
             <Subtitle size="md" tone="gold" tracking="wider" weight="bold">
               Latest Insights
             </Subtitle>
-            <h2 className="mt-6 font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-navy sm:text-[46px] lg:text-[40px]">
+            <h2 className="mt-5 font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-navy sm:text-[46px] lg:text-[40px]">
               Ideas for long-term thinkers.
             </h2>
           </div>

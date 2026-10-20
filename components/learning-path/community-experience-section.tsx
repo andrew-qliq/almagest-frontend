@@ -31,7 +31,7 @@ export function CommunityExperienceSection() {
         <Subtitle size="md" tone="white-muted" tracking="widest" weight="bold">
           Community Experience
         </Subtitle>
-        <h2 className="mt-7 max-w-5xl font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-white sm:text-[46px] lg:text-[50px]">
+        <h2 className="mt-5 max-w-5xl font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-white sm:text-[46px] lg:text-[40px]">
           Learn alongside people who think carefully.
         </h2>
 
