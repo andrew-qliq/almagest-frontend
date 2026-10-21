@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SectionContainer } from "@/components/shared/section-container";
+import { InsightCard } from "@/components/shared/insight-card";
 import { Subtitle } from "@/components/shared/subtitle";
 import { LATEST_INSIGHTS } from "@/lib/constants/insights";
 
@@ -29,38 +29,10 @@ export function LatestInsightsSection() {
 
         <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {LATEST_INSIGHTS.map((insight) => (
-            <Link
+            <InsightCard
               key={insight.href}
-              href={insight.href}
-              className="group border-b border-slate-200 pb-8"
-            >
-              <div className="relative aspect-[1.82/1] overflow-hidden bg-slate-100">
-                <Image
-                  src={insight.image}
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                  style={{ objectPosition: insight.imagePosition }}
-                />
-              </div>
-              <Subtitle
-                size="md"
-                tone="gold"
-                tracking="wider"
-                weight="bold"
-                className="mt-8"
-              >
-                {insight.category}
-              </Subtitle>
-              <h3 className="mt-5 font-heading text-[25px] font-medium leading-[1.12] tracking-[-0.035em] text-navy transition-colors duration-300 group-hover:text-blue-700">
-                {insight.title}
-              </h3>
-              <p className="mt-5 text-[15px] leading-7 text-slate-500">
-                {insight.description}
-              </p>
-              <p className="mt-5 text-xs text-slate-500">{insight.meta}</p>
-            </Link>
+              insight={insight}
+            />
           ))}
         </div>
       </SectionContainer>

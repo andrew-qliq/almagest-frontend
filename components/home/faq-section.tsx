@@ -44,7 +44,7 @@ export function FaqSection() {
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => setOpenItem(isOpen ? null : index)}
-                  className="group flex w-full items-center justify-between gap-6 py-7 text-left text-base font-semibold text-navy transition-colors hover:text-gold sm:py-8 sm:text-lg"
+                  className="group flex w-full items-center justify-between gap-6 py-7 text-left text-base font-semibold text-navy transition-colors hover:text-gold sm:py-7 sm:text-md"
                 >
                   {item.question}
                   <ChevronDown

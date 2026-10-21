@@ -1,15 +1,38 @@
-export const metadata = {
-  title: "Insights | Almagest Academy",
-};
+import type { Metadata } from "next";
+import { InsightsHeroSection } from "@/components/insights/insights-hero-section";
+import { InsightsGridSection } from "@/components/insights/insights-grid-section";
+import { BriefingSection } from "@/components/insights/briefing-section";
+
+export async function generateMetadata(): Promise<Metadata> {
+  // const res = await fetch(`${process.env.API_URL}/seo/insights`, {
+  //   next: { revalidate: 3600 },
+  // });
+  // const seo = await res.json();
+
+  const seo = {
+    title: "Insights | Almagest Academy",
+    description:
+      "Editorial thinking across money, macro history, technology, the UAE and long-term decision-making.",
+    ogImage: "/images/og-insights.jpg",
+  };
+
+  return {
+    title: seo.title,
+    description: seo.description,
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      images: [{ url: seo.ogImage }],
+    },
+  };
+}
 
 export default function InsightsPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 className="text-4xl font-bold tracking-tight">Insights</h1>
-      <p className="mt-4 text-zinc-600 max-w-2xl">
-        Articles and commentary on digital assets and frontier technology.
-      </p>
-      {/* Content placeholder — article grid/list */}
-    </div>
+    <>
+      <InsightsHeroSection />
+      <InsightsGridSection />
+      <BriefingSection />
+    </>
   );
 }

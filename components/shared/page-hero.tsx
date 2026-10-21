@@ -64,7 +64,7 @@ export function PageHero({
         "relative flex flex-col bg-navy overflow-hidden",
         size === "full"
           ? "min-h-[calc(90vh-3.5rem)] lg:min-h-[90vh]"
-          : "min-h-[460px] md:min-h-[520px]",
+          : "min-h-[300px] md:min-h-[380px]",
         className,
       )}
     >
