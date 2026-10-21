@@ -24,7 +24,7 @@ export function HeroSection() {
         },
         {
           label: "Explore Master Classes",
-          href: "/learning-path",
+          href: "/courses/master-class/bitcoin-crypto",
           variant: "secondary",
         },
       ]}
