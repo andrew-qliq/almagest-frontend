@@ -40,3 +40,32 @@ export const LEARNING_PATH_SELF_QUALIFY: SelfQualifyContent = {
     },
   ],
 };
+
+export const COMMUNITY_ACCESS_SELF_QUALIFY: SelfQualifyContent = {
+  subtitle: "Membership & Access",
+  title: "What is open, and what is for members.",
+  description:
+    "Free resources stay open to everyone. The deeper experience is reserved for enrolled learners.",
+  cards: [
+    {
+      label: "Open Access",
+      title: "Available to everyone.",
+      items: [
+        "WhatsApp broadcast",
+        "Journal articles and the briefing",
+        "Free introduction sessions",
+      ],
+      positive: true,
+    },
+    {
+      label: "Members",
+      title: "For enrolled learners.",
+      items: [
+        "Member discussion community",
+        "Priority access to Dubai gatherings",
+        "Course-specific cohorts",
+      ],
+      positive: true,
+    },
+  ],
+};

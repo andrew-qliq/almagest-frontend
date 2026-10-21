@@ -5,11 +5,17 @@ import type { SelfQualifyContent } from "@/lib/constants/self-qualify";
 
 export function SelfQualifySection({
   content,
+  cardBackgrounds = "positive-only",
+  background = "cream",
 }: {
   content: SelfQualifyContent;
+  cardBackgrounds?: "positive-only" | "all";
+  background?: "cream" | "white";
 }) {
   return (
-    <section className="bg-[#f8f5ef] py-20 sm:py-24 lg:py-28">
+    <section
+      className={`${background === "white" ? "bg-white" : "bg-[#f8f5ef]"} py-20 sm:py-24 lg:py-28`}
+    >
       <SectionContainer>
         <div className="max-w-4xl">
           <Subtitle size="md" tone="gold" tracking="wider" weight="bold">
@@ -30,7 +36,9 @@ export function SelfQualifySection({
               <article
                 key={card.label}
                 className={`transform-gpu border border-t-[3px] p-5 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2.5 hover:shadow-[0_28px_60px_rgba(13,27,42,0.16)] sm:p-9 lg:min-h-[320px] border-slate-200 border-t-emerald-700 shadow-[0_12px_34px_rgba(13,27,42,0.04)] ${
-                  card.positive ? "bg-white" : "bg-none"
+                  cardBackgrounds === "all" || card.positive
+                    ? "bg-white"
+                    : "bg-transparent"
                 }`}
               >
                 <div className="flex items-start justify-between gap-6">
