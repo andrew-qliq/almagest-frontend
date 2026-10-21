@@ -69,3 +69,32 @@ export const COMMUNITY_ACCESS_SELF_QUALIFY: SelfQualifyContent = {
     },
   ],
 };
+
+export const FOUNDATION_SELF_QUALIFY: SelfQualifyContent = {
+  subtitle: "Who This Is For",
+  title: "Ambitious, thoughtful and ready to engage.",
+  description: "",
+  cards: [
+    {
+      label: "For You",
+      title: "You want structured understanding.",
+      items: [
+        "Professionals seeking context",
+        "Entrepreneurs making long-term decisions",
+        "Investors building financial literacy",
+        "Leaders navigating structural change",
+      ],
+      positive: true,
+    },
+    {
+      label: "Not For You",
+      title: "You want shortcuts or signals.",
+      items: [
+        "Guaranteed returns or predictions",
+        "Trading calls or investment advice",
+        "Passive consumption without application",
+      ],
+      positive: false,
+    },
+  ],
+};

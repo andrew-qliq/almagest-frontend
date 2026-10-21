@@ -9,6 +9,7 @@ interface CertificateSectionProps {
   description?: string;
   points?: readonly string[];
   tone?: "light" | "navy";
+  courseTitle?: string;
 }
 
 const DEFAULT_POINTS = [
@@ -23,6 +24,7 @@ export function CertificateSection({
   description = "Awarded on completion of a course, as a record of study and not a professional qualification.",
   points = DEFAULT_POINTS,
   tone = "light",
+  courseTitle = "[Course title]",
 }: CertificateSectionProps) {
   const isNavy = tone === "navy";
 
@@ -57,7 +59,10 @@ export function CertificateSection({
                   className="flex items-start gap-4 text-[15px] sm:text-base"
                 >
                   <Check
-                    className="mt-0.5 h-5 w-5 shrink-0 text-emerald-700"
+                    className={cn(
+                      "mt-0.5 h-5 w-5 shrink-0",
+                      isNavy ? "text-gold" : "text-emerald-700",
+                    )}
                     strokeWidth={1.8}
                   />
                   <span className={isNavy ? "text-white/80" : "text-navy/85"}>
@@ -89,7 +94,7 @@ export function CertificateSection({
                   has completed
                 </p>
                 <p className="mt-3 font-secondary text-[20px] text-navy sm:text-[23px]">
-                  [Course title]
+                  {courseTitle}
                 </p>
                 <div className="mt-auto flex w-full justify-between border-t border-slate-200 pt-5 text-[11px] tracking-[0.08em] text-slate-500">
                   <span>[Date]</span>

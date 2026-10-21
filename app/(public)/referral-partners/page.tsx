@@ -1,18 +1,30 @@
-export const metadata = {
+import type { Metadata } from "next";
+import { ReferralHeroSection } from "@/components/referral-partners/referral-hero-section";
+import { ReferralAudienceSection } from "@/components/referral-partners/referral-audience-section";
+import { ProfessionalPartnershipSection } from "@/components/referral-partners/professional-partnership-section";
+import { PartnerDashboardPreviewSection } from "@/components/referral-partners/partner-dashboard-preview-section";
+import { ReferralFaqSection } from "@/components/referral-partners/referral-faq-section";
+
+export const metadata: Metadata = {
   title: "Referral Partners | Almagest Academy",
+  description:
+    "Apply to become an Almagest Academy referral partner and introduce serious learners to the Academy.",
+  openGraph: {
+    title: "Referral Partners | Almagest Academy",
+    description:
+      "A professional referral partnership for creators, educators and community owners.",
+    images: [{ url: "/images/home/hero-banner.jpg" }],
+  },
 };
 
 export default function ReferralPartnersPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 className="text-4xl font-bold tracking-tight">Referral Partner Programme</h1>
-      <p className="mt-4 text-zinc-600 max-w-2xl">
-        Earn commission by referring students to Almagest Academy. Open to influencers and
-        content creators who hold a valid UAE advertiser permit.
-      </p>
-      <a href="/referral-partners/apply" className="mt-8 inline-block bg-black text-white px-6 py-3 rounded-full text-sm font-medium">
-        Apply to Become a Partner
-      </a>
-    </div>
+    <>
+      <ReferralHeroSection />
+      <ReferralAudienceSection />
+      <ProfessionalPartnershipSection />
+      <PartnerDashboardPreviewSection />
+      <ReferralFaqSection />
+    </>
   );
 }

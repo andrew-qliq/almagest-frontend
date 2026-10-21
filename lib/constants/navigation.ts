@@ -12,8 +12,11 @@ export const PUBLIC_NAV_LINKS: PublicNavItem[] = [
     href: "/courses/foundation",
     children: [
       { label: "Foundation", href: "/courses/foundation" },
-      { label: "Bitcoin & Monetary Systems", href: "/courses/master-class/bitcoin-crypto" },
-      { label: "Frontier Tech", href: "/courses/master-class/frontier-tech" },
+      {
+        label: "Bitcoin & Monetary Systems",
+        href: "/courses/master-class/bitcoin-crypto",
+      },
+      // { label: "Frontier Tech", href: "/courses/master-class/frontier-tech" },
     ],
   },
   { label: "Insights", href: "/insights" },
@@ -76,7 +79,10 @@ export const FOOTER_LINK_GROUPS = [
       { label: "Cookies", href: "/legal/cookies" },
       { label: "Terms & Refunds", href: "/legal/terms" },
       { label: "Data Requests", href: "/legal/data-requests" },
-      { label: "Education Disclaimer", href: "/legal/virtual-asset-disclaimer" },
+      {
+        label: "Education Disclaimer",
+        href: "/legal/virtual-asset-disclaimer",
+      },
     ],
   },
 ] as const;

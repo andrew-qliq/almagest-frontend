@@ -24,9 +24,11 @@ export function SelfQualifySection({
           <h2 className="mt-5 font-heading text-[36px] font-medium leading-[1.08] tracking-[-0.045em] text-navy sm:text-[46px] lg:text-[40px]">
             {content.title}
           </h2>
-          <p className="mt-5 text-[15px] leading-7 text-slate-500 sm:text-base">
-            {content.description}
-          </p>
+          {content.description && (
+            <p className="mt-5 text-[15px] leading-7 text-slate-500 sm:text-base">
+              {content.description}
+            </p>
+          )}
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-16">
@@ -35,7 +37,7 @@ export function SelfQualifySection({
             return (
               <article
                 key={card.label}
-                className={`transform-gpu border border-t-[3px] p-5 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2.5 hover:shadow-[0_28px_60px_rgba(13,27,42,0.16)] sm:p-9 lg:min-h-[320px] border-slate-200 border-t-emerald-700 shadow-[0_12px_34px_rgba(13,27,42,0.04)] ${
+                className={`transform-gpu border border-t-[3px] p-5 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2.5 hover:shadow-[0_28px_60px_rgba(13,27,42,0.16)] sm:p-9 lg:min-h-[320px] border-slate-200 shadow-[0_12px_34px_rgba(13,27,42,0.04)] ${card.positive ? "border-t-emerald-700" : "border-t-slate-500"} ${
                   cardBackgrounds === "all" || card.positive
                     ? "bg-white"
                     : "bg-transparent"

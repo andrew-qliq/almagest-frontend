@@ -52,7 +52,9 @@ export function MobileNavigation() {
         onClick={closeMenu}
         className={cn(
           "fixed inset-0 z-[60] bg-black/55 backdrop-blur-[2px] transition-opacity duration-300 lg:hidden",
-          isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
+          isOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0",
         )}
       />
 
@@ -64,10 +66,7 @@ export function MobileNavigation() {
           isOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
-        <div className="flex h-16 items-center justify-between border-b border-white/10 px-6">
-          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gold">
-            Navigation
-          </span>
+        <div className="flex h-16 items-center justify-end border-b border-white/10 px-6">
           <button
             ref={closeButtonRef}
             type="button"
@@ -79,7 +78,10 @@ export function MobileNavigation() {
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto px-6 py-5" aria-label="Mobile navigation">
+        <nav
+          className="flex-1 overflow-y-auto px-6 py-5"
+          aria-label="Mobile navigation"
+        >
           <ul className="divide-y divide-white/10">
             {PUBLIC_NAV_LINKS.map((item) => {
               const isExpanded = expandedSection === item.label;
@@ -100,7 +102,9 @@ export function MobileNavigation() {
                         <ChevronDown
                           className={cn(
                             "h-4 w-4 transition-[color,transform] duration-300",
-                            isExpanded ? "rotate-180 text-gold" : "text-white/45",
+                            isExpanded
+                              ? "rotate-180 text-gold"
+                              : "text-white/45",
                           )}
                         />
                       </button>

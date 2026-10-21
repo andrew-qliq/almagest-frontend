@@ -1,16 +1,41 @@
-export const metadata = {
-  title: "About | Almagest Academy",
-};
+import type { Metadata } from "next";
+import { AboutHeroSection } from "@/components/about/about-hero-section";
+import { MissionMethodSection } from "@/components/about/mission-method-section";
+import { AcademyPillarsSection } from "@/components/about/academy-pillars-section";
+import { AcademyScopeSection } from "@/components/about/academy-scope-section";
+import { DeliveryModelSection } from "@/components/about/delivery-model-section";
+import { AboutAudienceSection } from "@/components/about/about-audience-section";
+import { JoinNowBanner } from "../../../components/home/join-now-banner";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = {
+    title: "About the Academy | Almagest Academy",
+    description:
+      "Learn how Almagest Academy develops clarity through history, incentives and decision-making frameworks.",
+    ogImage: "/images/home/hero-banner.jpg",
+  };
+
+  return {
+    title: seo.title,
+    description: seo.description,
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      images: [{ url: seo.ogImage }],
+    },
+  };
+}
 
 export default function AboutPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 className="text-4xl font-bold tracking-tight">About Almagest Academy</h1>
-      <p className="mt-4 text-zinc-600 max-w-2xl">
-        Almagest Academy is a registered UAE education business dedicated to building
-        genuine understanding of digital assets and frontier technology.
-      </p>
-      {/* Page content placeholder — trade licence, mission, values */}
-    </div>
+    <>
+      <AboutHeroSection />
+      <MissionMethodSection />
+      <AcademyPillarsSection />
+      <AcademyScopeSection />
+      <DeliveryModelSection />
+      <AboutAudienceSection />
+      <JoinNowBanner />
+    </>
   );
 }

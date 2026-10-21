@@ -1,15 +1,39 @@
-export const metadata = {
-  title: "Meet the Founder | Almagest Academy",
-};
+import type { Metadata } from "next";
+import { FounderHeroSection } from "@/components/founder/founder-hero-section";
+import { FounderIntroductionSection } from "@/components/founder/founder-introduction-section";
+import { FounderStorySection } from "@/components/founder/founder-story-section";
+import { FounderTimelineSection } from "@/components/founder/founder-timeline-section";
+import { FounderMediaSection } from "@/components/founder/founder-media-section";
+import { JoinNowBanner } from "../../../components/home/join-now-banner";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = {
+    title: "Meet the Founder | Almagest Academy",
+    description:
+      "Meet Marco Teora, founder of Almagest Academy, and learn about the thinking behind the institution.",
+    ogImage: "/images/insights/hero-banner.jpg",
+  };
+
+  return {
+    title: seo.title,
+    description: seo.description,
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      images: [{ url: seo.ogImage }],
+    },
+  };
+}
 
 export default function FounderPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 className="text-4xl font-bold tracking-tight">Meet the Founder</h1>
-      <p className="mt-4 text-zinc-600 max-w-2xl">
-        The founder's story, background and vision for Almagest Academy.
-      </p>
-      {/* Page content placeholder — bio, photo, timeline */}
-    </div>
+    <>
+      <FounderHeroSection />
+      <FounderIntroductionSection />
+      <FounderStorySection />
+      <FounderTimelineSection />
+      <FounderMediaSection />
+      <JoinNowBanner />
+    </>
   );
 }

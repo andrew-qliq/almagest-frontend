@@ -8,15 +8,19 @@ interface FrameworksSectionProps {
   title: ReactNode;
   subtitle?: string;
   description?: string;
+  background?: "white" | "cream";
 }
 
 export function FrameworksSection({
   title,
   subtitle = "The Six Pillars",
   description = "Each pillar develops a different dimension of financial and strategic intelligence.",
+  background = "white",
 }: FrameworksSectionProps) {
   return (
-    <section className="bg-white py-20 sm:py-24 lg:py-28">
+    <section
+      className={`${background === "cream" ? "bg-[#f8f5ef]" : "bg-white"} py-20 sm:py-24 lg:py-28`}
+    >
       <SectionContainer>
         <div className="max-w-5xl">
           <Subtitle tone="gold" tracking="wider" weight="bold" size="md">
